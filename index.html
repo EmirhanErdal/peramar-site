@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>PERAMAR — Market operasyon platformu</title>
+<meta name="description" content="PERAMAR; reyondan patrona, depodan tır şoförüne kadar marketinizdeki herkesi tek uygulamada buluşturur. Rol bazlı sipariş, denetim, canlı piyasa fiyat analizi, depo ve sevkiyat yönetimi.">
+<meta name="theme-color" content="#061C19">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PERAMAR — Reyondan patrona tüm market tek uygulamada">
+<meta property="og:description" content="Sipariş, denetim, canlı fiyat analizi, depo ve sevkiyat. Herkes yalnızca kendi işini görür.">
+<meta property="og:image" content="https://emirhanerdal.github.io/peramar-site/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/manrope-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none"><symbol id="i-shopping-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></symbol><symbol id="i-map" viewBox="0 0 24 24"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></symbol><symbol id="i-network" viewBox="0 0 24 24"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></symbol><symbol id="i-crown" viewBox="0 0 24 24"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></symbol><symbol id="i-clipboard-check" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol><symbol id="i-chart-candlestick" viewBox="0 0 24 24"><path d="M9 5v4"/><rect width="4" height="6" x="7" y="9" rx="1"/><path d="M9 15v2"/><path d="M17 3v2"/><rect width="4" height="8" x="15" y="5" rx="1"/><path d="M17 13v3"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/></symbol><symbol id="i-warehouse" viewBox="0 0 24 24"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"/><path d="M6 18h12"/><path d="M6 14h12"/><rect width="12" height="12" x="6" y="10"/></symbol><symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol><symbol id="i-apple" viewBox="0 0 24 24"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/><path d="M10 2c1 .5 2 2 2 5"/></symbol><symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol><symbol id="i-pen-line" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></symbol><symbol id="i-scan-barcode" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 7v10"/><path d="M12 7v10"/><path d="M17 7v10"/></symbol><symbol id="i-bell-ring" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/><path d="M4 2C2.8 3.7 2 5.7 2 8"/><path d="M22 8c0-2.3-.8-4.3-2-6"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol><symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol><symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol><symbol id="i-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol><symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></symbol><symbol id="i-tablet" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><line x1="12" x2="12.01" y1="18" y2="18"/></symbol><symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol><symbol id="i-trending-down" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></symbol><symbol id="i-trending-up" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol><symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol><symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol><symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol><symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol><symbol id="i-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol><symbol id="i-file-spreadsheet" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M8 13h2"/><path d="M14 13h2"/><path d="M8 17h2"/><path d="M14 17h2"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol><symbol id="i-layers" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol><symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol><symbol id="i-boxes" viewBox="0 0 24 24"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"/><path d="m7 16.5-4.74-2.85"/><path d="m7 16.5 5-3"/><path d="M7 16.5v5.17"/><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"/><path d="m17 16.5-5-3"/><path d="m17 16.5 4.74-2.85"/><path d="M17 16.5v5.17"/><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"/><path d="M12 8 7.26 5.15"/><path d="m12 8 4.74-2.85"/><path d="M12 13.5V8"/></symbol><symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-fingerprint" viewBox="0 0 24 24"><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"/><path d="M14 13.12c0 2.38 0 6.38-1 8.88"/><path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"/><path d="M2 12a10 10 0 0 1 18-6"/><path d="M2 16h.01"/><path d="M21.8 16c.2-2 .131-5.354 0-6"/><path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"/><path d="M8.65 22c.21-.66.45-1.32.57-2"/><path d="M9 6.8a6 6 0 0 1 9 5.2v2"/></symbol><symbol id="i-cloud-off" viewBox="0 0 24 24"><path d="m2 2 20 20"/><path d="M5.782 5.782A7 7 0 0 0 9 19h8.5a4.5 4.5 0 0 0 1.307-.193"/><path d="M21.532 16.5A4.5 4.5 0 0 0 17.5 10h-1.79A7.008 7.008 0 0 0 10 5.07"/></symbol><symbol id="i-plug" viewBox="0 0 24 24"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></symbol><symbol id="i-building-2" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol><symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol><symbol id="i-graduation-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol><symbol id="i-layout-dashboard" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></symbol><symbol id="i-chart-column" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol><symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-navigation" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></symbol><symbol id="i-timer" viewBox="0 0 24 24"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></symbol><symbol id="i-thumbs-up" viewBox="0 0 24 24"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></symbol><symbol id="i-circle-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol><symbol id="i-radar" viewBox="0 0 24 24"><path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"/><path d="M4 6h.01"/><path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"/><path d="M16.24 7.76A6 6 0 1 0 8.23 16.67"/><path d="M12 18h.01"/><path d="M17.99 11.66A6 6 0 0 1 15.77 16.67"/><circle cx="12" cy="12" r="2"/><path d="m13.41 10.59 5.66-5.66"/></symbol><symbol id="i-inbox" viewBox="0 0 24 24"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></symbol><symbol id="i-list-checks" viewBox="0 0 24 24"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></symbol><symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></symbol><symbol id="i-signature" viewBox="0 0 24 24"><path d="m21 17-2.156-1.868A.5.5 0 0 0 18 15.5v.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1c0-2.545-3.991-3.97-8.5-4a1 1 0 0 0 0 5c4.153 0 4.745-11.295 5.708-13.5a2.5 2.5 0 1 1 3.31 3.284"/><path d="M3 21h18"/></symbol><symbol id="i-wand-sparkles" viewBox="0 0 24 24"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></symbol><symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol><symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol><symbol id="i-percent" viewBox="0 0 24 24"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol><symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></symbol><symbol id="i-user-round-check" viewBox="0 0 24 24"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="m16 19 2 2 4-4"/></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#0E5E57"/><path d="M29 50V14h6.5l5 10 5-10H52v36h-6.5V28.5l-5 8.5-5-8.5V50z" fill="#F4A32A"/><path fill-rule="evenodd" d="M12 14h15a11 11 0 0 1 0 22h-7.5v14H12zM19.5 21.5h7a3.5 3.5 0 0 1 0 7h-7z" fill="none" stroke="#0E5E57" stroke-width="3" stroke-linejoin="round"/><path fill-rule="evenodd" d="M12 14h15a11 11 0 0 1 0 22h-7.5v14H12zM19.5 21.5h7a3.5 3.5 0 0 1 0 7h-7z" fill="#fff"/></symbol>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1F8A5B"/><stop offset="1" stop-color="#0E5E57"/></linearGradient>
+  </defs>
+</svg>
+
+<div class="progress" id="progress"></div>
+
+<!-- ========== ÜST MENÜ ========== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="PERAMAR ana sayfa"><svg><use href="#logo"/></svg><span>PERA<b>MAR</b></span></a>
+    <nav class="nav-links" aria-label="Ana menü">
+      <a href="#cozum">Çözüm</a>
+      <a href="#roller">Roller</a>
+      <a href="#akis">Akış</a>
+      <a href="#moduller">Modüller</a>
+      <a href="#guvenlik">Güvenlik</a>
+      <a href="#sss">SSS</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost btn-sm" href="https://emirhanerdal.github.io/peramar/" target="_blank" rel="noopener"><svg class="i"><use href="#i-play"/></svg>Canlı demo</a>
+      <a class="btn btn-accent btn-sm" href="#iletisim">Demo talep et</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menüyü aç"><svg class="i"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <div class="top">
+    <a href="#top" class="brand"><svg><use href="#logo"/></svg><span>PERA<b>MAR</b></span></a>
+    <button class="burger" style="display:grid;margin:0" id="mclose" aria-label="Menüyü kapat"><svg class="i"><use href="#i-x"/></svg></button>
+  </div>
+  <nav>
+    <a href="#cozum" style="transition-delay:.05s">Çözüm</a>
+    <a href="#roller" style="transition-delay:.1s">Roller</a>
+    <a href="#akis" style="transition-delay:.15s">Akış</a>
+    <a href="#moduller" style="transition-delay:.2s">Modüller</a>
+    <a href="#guvenlik" style="transition-delay:.25s">Güvenlik</a>
+    <a href="#sss" style="transition-delay:.3s">SSS</a>
+  </nav>
+  <div class="bot">
+    <a class="btn btn-ghost btn-lg" href="https://emirhanerdal.github.io/peramar/" target="_blank" rel="noopener"><svg class="i"><use href="#i-play"/></svg>Canlı demoyu aç</a>
+    <a class="btn btn-accent btn-lg" href="#iletisim">Demo talep et</a>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="orb a"></div><div class="orb b"></div>
+  <svg class="hero-routes" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path id="hr1" d="M-40 760 C 260 700, 340 520, 620 540 S 1000 700, 1480 520"/>
+    <path id="hr2" d="M-40 220 C 200 260, 380 120, 640 180 S 1100 120, 1480 260"/>
+    <path id="hr3" d="M180 940 C 260 700, 520 640, 760 760 S 1200 900, 1300 940"/>
+    <circle class="node" cx="620" cy="540" r="5"/><circle class="node" cx="640" cy="180" r="5"/><circle class="node" cx="760" cy="760" r="5"/>
+    <circle class="dot" r="4"><animateMotion dur="14s" repeatCount="indefinite"><mpath href="#hr1"/></animateMotion></circle>
+    <circle class="dot" r="3.5"><animateMotion dur="18s" begin="-6s" repeatCount="indefinite"><mpath href="#hr2"/></animateMotion></circle>
+    <circle class="dot" r="3"><animateMotion dur="12s" begin="-3s" repeatCount="indefinite"><mpath href="#hr3"/></animateMotion></circle>
+  </svg>
+
+  <div class="wrap">
+    <div class="hero-text">
+      <span class="pill rv"><span class="tag">YENİ</span><span class="d-only">Türk perakendesi için market operasyon platformu</span><span class="m-only">Market operasyon platformu</span></span>
+      <h1 class="rv" style="--d:.1s"><span class="grad">Reyondan patrona,</span><br>tek uygulamada<br><span class="rotator" id="rotator"><span class="on">sipariş.</span><span>denetim.</span><span>fiyat analizi.</span><span>depo.</span><span>sevkiyat.</span></span></h1>
+      <p class="lead rv" style="--d:.2s">PERAMAR, marketinizde çalışan herkesi aynı sistemde buluşturur. Reyon sorumlusu yalnızca kendi bölümünü, şoför yalnızca kendi durağını, patron ise şirketin tamamını görür. WhatsApp grupları, kâğıt formlar ve Excel dosyaları geride kalır.</p>
+      <div class="hero-ctas rv" style="--d:.3s">
+        <a class="btn btn-accent btn-lg" href="https://emirhanerdal.github.io/peramar/" target="_blank" rel="noopener">Canlı demoyu deneyin<svg class="i go"><use href="#i-arrow-right"/></svg></a>
+        <a class="btn btn-ghost btn-lg" href="#roller"><svg class="i"><use href="#i-users"/></svg>9 rolü keşfedin</a>
+      </div>
+      <div class="hero-facts rv" style="--d:.4s">
+        <span><svg class="i"><use href="#i-circle-check"/></svg>Kurulum gerektirmez</span>
+        <span><svg class="i"><use href="#i-circle-check"/></svg>Telefon, tablet, bilgisayar</span>
+        <span><svg class="i"><use href="#i-circle-check"/></svg>Tamamen Türkçe</span>
+      </div>
+    </div>
+
+    <div class="hero-visual rv rv-s" style="--d:.25s">
+      <div class="hero-ring"></div><div class="hero-ring b"></div>
+      <div class="hero-stage" id="heroStage">
+        <div class="phone back"><div class="screen"><img src="img/shots/m-login.jpg" alt="PERAMAR giriş ekranı" width="390" height="844"></div></div>
+        <div class="phone main">
+          <div class="hero-caption" id="heroCap"><b>Reyon</b> · Ana sayfa</div>
+          <div class="screen" id="heroScreen">
+            <img class="on" src="img/shots/m-reyon.jpg" alt="Reyon sorumlusu ana sayfası" width="390" height="844" data-cap="<b>Reyon</b> · Ana sayfa">
+            <img src="img/shots/m-magaza-onay.jpg" alt="Mağaza müdürü onay ekranı" width="390" height="844" data-cap="<b>Mağaza müdürü</b> · Onaylar" loading="lazy">
+            <img src="img/shots/m-denetci-denetim.jpg" alt="Denetçi denetim ekranı" width="390" height="844" data-cap="<b>Denetçi</b> · Denetim turu" loading="lazy">
+            <img src="img/shots/m-satinalma.jpg" alt="Satın alma canlı piyasa ekranı" width="390" height="844" data-cap="<b>Satın alma</b> · Canlı piyasa" loading="lazy">
+            <img src="img/shots/m-sofor.jpg" alt="Tır şoförü günlük rota ekranı" width="390" height="844" data-cap="<b>Şoför</b> · Bugünkü rota" loading="lazy">
+          </div>
+          <div class="hero-dots" id="heroDots"></div>
+        </div>
+        <div class="float-card c1" data-fc="0"><span class="ic ok"><svg class="i"><use href="#i-badge-check"/></svg></span><span><b>SP-260418 onaylandı</b><small>Murat Demir · Kadıköy · şimdi</small></span></div>
+        <div class="float-card c2" data-fc="1"><span class="ic warn"><svg class="i"><use href="#i-trending-down"/></svg></span><span><b>Rakip fiyatı %4 düştü</b><small>Ayçiçek yağı 5 L · 2 dk önce</small></span></div>
+        <div class="float-card c3" data-fc="2"><span class="ic info"><svg class="i"><use href="#i-truck"/></svg></span><span><b>34 PRM 017 yolda</b><small>Sıradaki durak: Ataşehir · 18 dk</small></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><i></i>KAYDIR</div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee">
+  <span>Manav</span><span>Kasap</span><span>Şarküteri</span><span>Fırın</span><span>Süt ürünleri</span><span>Kuru gıda</span><span>İçecek</span><span>Temizlik</span><span>Kişisel bakım</span><span>Dondurulmuş</span><span>Atıştırmalık</span><span>Merkez depo</span><span>Tedarikçi</span><span>Sevkiyat</span>
+</div></div>
+
+<!-- ========== ÇÖZÜM / ÖNCE-SONRA ========== -->
+<section class="sec" id="cozum">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow rv">Sorun ve çözüm</span>
+      <h2 class="h2 rv split" style="--d:.05s">Marketler bugün hâlâ <em>telefon, kâğıt ve Excel</em> ile yönetiliyor.</h2>
+      <p class="lead rv" style="--d:.1s">Siparişler WhatsApp grubunda kayboluyor, denetim formu çekmecede kalıyor, rakip fiyatı ancak haftalar sonra fark ediliyor. Düğmeye basın, PERAMAR ile nasıl değiştiğini görün.</p>
+      <div class="ba-toggle rv" style="--d:.15s" id="baToggle" role="tablist">
+        <span class="knob"></span>
+        <button class="on" data-v="before" role="tab" aria-selected="true">Bugün</button>
+        <button data-v="after" role="tab" aria-selected="false">PERAMAR ile</button>
+      </div>
+    </div>
+    <div class="ba-grid ba" id="ba">
+      <div class="ba-card rv" style="--d:0s"><div class="ba-inner" style="--d:0s">
+        <div class="ba-face f"><span class="ic"><svg class="i"><use href="#i-message-circle"/></svg></span><h3>WhatsApp'tan sipariş</h3><p>Reyon, müdürü arar ya da gruba mesaj atar. Kim neyi, ne kadar istedi; onaylandı mı, kimse emin değil.</p><span class="tag"><svg class="i"><use href="#i-circle-x"/></svg>Kayıp ve tekrar</span></div>
+        <div class="ba-face b"><span class="ic"><svg class="i"><use href="#i-shopping-cart"/></svg></span><h3>Akıllı sipariş</h3><p>Kritik stok otomatik çıkar, önerilen sipariş tek dokunuşla hazırlanır. Müdür onayı, depo ve tedarikçi ayrımı otomatik.</p><span class="tag"><svg class="i"><use href="#i-circle-check"/></svg>Her adım kayıtlı</span></div>
+      </div></div>
+      <div class="ba-card rv" style="--d:.08s"><div class="ba-inner" style="--d:.08s">
+        <div class="ba-face f"><span class="ic"><svg class="i"><use href="#i-file-text"/></svg></span><h3>Kâğıt denetim formu</h3><p>Denetçi formu doldurur, fotoğraflar telefonda kalır. Eksikler kime, ne zaman iletildi bilinmez.</p><span class="tag"><svg class="i"><use href="#i-circle-x"/></svg>Takip yok</span></div>
+        <div class="ba-face b"><span class="ic"><svg class="i"><use href="#i-clipboard-check"/></svg></span><h3>Dijital denetim turu</h3><p>Puanlı sorular, zaman damgalı fotoğraf, müdür imzası. Her eksik otomatik olarak sorumlusuna görev olur.</p><span class="tag"><svg class="i"><use href="#i-circle-check"/></svg>Kanıtlı ve izlenebilir</span></div>
+      </div></div>
+      <div class="ba-card rv" style="--d:.16s"><div class="ba-inner" style="--d:.16s">
+        <div class="ba-face f"><span class="ic"><svg class="i"><use href="#i-file-spreadsheet"/></svg></span><h3>Excel'de fiyat takibi</h3><p>Rakip fiyatları elle toplanır, tablo güncellenene kadar fırsat çoktan kaçmıştır.</p><span class="tag"><svg class="i"><use href="#i-circle-x"/></svg>Geç kalınır</span></div>
+        <div class="ba-face b"><span class="ic"><svg class="i"><use href="#i-chart-candlestick"/></svg></span><h3>Canlı piyasa analizi</h3><p>Rakip fiyatları tek ekranda, anlık uyarılarla. Marjınızı koruyan fiyat önerisi hazır gelir.</p><span class="tag"><svg class="i"><use href="#i-circle-check"/></svg>Anında karar</span></div>
+      </div></div>
+      <div class="ba-card rv" style="--d:.24s"><div class="ba-inner" style="--d:.24s">
+        <div class="ba-face f"><span class="ic"><svg class="i"><use href="#i-phone"/></svg></span><h3>Telefonla tır takibi</h3><p>"Neredesin?" aramaları, el yazısı irsaliyeler, teslim edildi mi bilinmeyen koliler.</p><span class="tag"><svg class="i"><use href="#i-circle-x"/></svg>Belirsizlik</span></div>
+        <div class="ba-face b"><span class="ic"><svg class="i"><use href="#i-route"/></svg></span><h3>Uçtan uca sevkiyat</h3><p>Hangi ürün hangi tıra, hangi tır hangi mağazaya. Şoför imza ve fotoğrafla teslim eder, herkes anında görür.</p><span class="tag"><svg class="i"><use href="#i-circle-check"/></svg>Şeffaf lojistik</span></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ROLLER ========== -->
+<section class="sec roles" id="roller" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow rv">Rol bazlı ekranlar</span>
+      <h2 class="h2 rv split">Herkes yalnızca <em>kendi işini</em> görür.</h2>
+      <p class="lead rv">En alttaki reyon görevlisinden en üstteki patrona kadar 9 farklı rol, 9 farklı ekran. Kimse kalabalık menülerde kaybolmaz; herkes yalnızca işine yarayanı görür, yetkisi olmayanı göremez.</p>
+    </div>
+    <div class="roles-box" id="rolesBox">
+      <div class="role-list rv rv-l" id="roleList" role="tablist" aria-label="Roller"></div>
+      <div class="role-panel rv rv-r" id="rolePanel" role="tabpanel">
+        <div class="role-info" id="roleInfo"></div>
+        <div class="role-phone"><div class="phone"><div class="screen" id="roleScreen"></div></div></div>
+      </div>
+    </div>
+
+    <div class="pyramid" aria-label="Yetki hiyerarşisi">
+      <div class="pyr-row rv"><span><svg class="i"><use href="#i-crown"/></svg>Patron</span></div>
+      <div class="pyr-row rv" style="--d:.08s"><span><svg class="i"><use href="#i-network"/></svg>Bölge müdürü</span><span><svg class="i"><use href="#i-chart-candlestick"/></svg>Satın alma</span><span><svg class="i"><use href="#i-clipboard-check"/></svg>Denetçi</span></div>
+      <div class="pyr-row rv" style="--d:.16s"><span><svg class="i"><use href="#i-store"/></svg>Mağaza müdürü</span><span><svg class="i"><use href="#i-warehouse"/></svg>Depo</span><span><svg class="i"><use href="#i-route"/></svg>Sevkiyat</span></div>
+      <div class="pyr-row rv" style="--d:.24s"><span><svg class="i"><use href="#i-apple"/></svg>Reyon sorumlusu</span><span><svg class="i"><use href="#i-truck"/></svg>Tır şoförü</span></div>
+      <p class="pyr-note rv" style="--d:.3s">Yetkiler patron ekranından yönetilir: kim hangi mağazayı, hangi bölümü görür, tek dokunuşla belirlenir.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== AKIŞ ========== -->
+<section class="sec flow dark" id="akis">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow rv">Uçtan uca akış</span>
+      <h2 class="h2 rv split">Bir siparişin <em>yolculuğu</em>, saniye saniye.</h2>
+      <p class="lead rv">Reyonda verilen sipariş; müdür onayından depo toplamaya, tır yüklemesinden mağaza teslimine kadar zincirdeki herkesin ekranına kendiliğinden düşer. Kimse kimseyi aramaz.</p>
+    </div>
+    <div class="flow-track rv" id="flowTrack">
+      <div class="flow-line"><i id="flowFill"></i></div>
+      <div class="flow-truck" id="flowTruck"><svg class="i"><use href="#i-truck"/></svg></div>
+      <div class="flow-steps" id="flowSteps"></div>
+    </div>
+    <div class="flow-detail">
+      <div class="flow-card rv" id="flowCard"></div>
+      <div class="flow-card rv" style="--d:.1s">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><span class="live">Canlı akış</span><small style="color:var(--on-dark-2);font-weight:700;font-size:13px">Tüm roller · bugün</small></div>
+        <div class="flow-log" id="flowLog" style="margin-top:16px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MODÜLLER ========== -->
+<section class="sec" id="moduller">
+  <div class="wrap">
+    <div class="sec-head center" style="margin-bottom:100px">
+      <span class="eyebrow rv">Modüller</span>
+      <h2 class="h2 rv split">Marketin her köşesi için <em>ayrı bir uzman.</em></h2>
+      <p class="lead rv">Her modül, o işi her gün yapan kişinin gözünden tasarlandı: büyük düğmeler, az adım, sıfır kafa karışıklığı.</p>
+    </div>
+
+    <!-- 1 Sipariş -->
+    <div class="feature">
+      <div class="f-text">
+        <span class="num-tag rv">01</span>
+        <h3 class="rv">Sipariş, reyonda <em>30 saniyede</em> hazır.</h3>
+        <p class="rv">Kritik stoktaki ürünler kendiliğinden listelenir. PERAMAR satış hızına göre siparişi önerir; reyon sorumlusu yalnızca kontrol edip gönderir. Sistem her kalemi merkez depo ya da tedarikçi olarak ayırır.</p>
+        <ul class="f-list">
+          <li class="rv"><span class="ic"><svg class="i"><use href="#i-wand-sparkles"/></svg></span><span><b>Önerilen sipariş</b><span>Minimum stok ve satış hızına göre otomatik miktar.</span></span></li>
+          <li class="rv" style="--d:.05s"><span class="ic"><svg class="i"><use href="#i-scan-barcode"/></svg></span><span><b>Barkodla ekleme</b><span>Rafta okut, sepete düşsün. Arama gerekmez.</span></span></li>
+          <li class="rv" style="--d:.1s"><span class="ic"><svg class="i"><use href="#i-badge-check"/></svg></span><span><b>Onay zinciri</b><span>Mağaza müdürü onaylar, limiti aşan sipariş bölge onayına gider.</span></span></li>
+        </ul>
+      </div>
+      <div class="f-vis rv rv-r" id="cartVis">
+        <div class="ui">
+          <span class="sparkle"><svg class="i"><use href="#i-sparkles"/></svg>Önerilen sipariş</span>
+          <div class="ui-h"><span><b>Yeni sipariş</b><br><small>Kadıköy · Manav</small></span><span class="chip warn"><svg class="i"><use href="#i-clock"/></svg>Kesim 16:00</span></div>
+          <div class="cart-rows">
+            <div class="cart-row" style="--d:.1s"><span class="th" style="background:#FDECEA">🍅</span><span><b>Domates (Salkım)</b><small><span class="route-tag m">MERKEZ</span>Stok 4 / 20 kg</small></span><span class="q"><i>−</i><span data-q="40">0</span><i>+</i></span></div>
+            <div class="cart-row" style="--d:.2s"><span class="th" style="background:#E8F5E1">🥒</span><span><b>Salatalık</b><small><span class="route-tag m">MERKEZ</span>Stok 3 / 15 kg</small></span><span class="q"><i>−</i><span data-q="30">0</span><i>+</i></span></div>
+            <div class="cart-row" style="--d:.3s"><span class="th" style="background:#FEF4E2">🍌</span><span><b>Muz (İthal)</b><small><span class="route-tag t">TEDARİKÇİ</span>Stok 2 / 12 kg</small></span><span class="q"><i>−</i><span data-q="24">0</span><i>+</i></span></div>
+            <div class="cart-row" style="--d:.4s"><span class="th" style="background:#EAF3E6">🥬</span><span><b>Kıvırcık Marul</b><small><span class="route-tag t">TEDARİKÇİ</span>Stok 6 / 30 adet</small></span><span class="q"><i>−</i><span data-q="36">0</span><i>+</i></span></div>
+          </div>
+          <div class="cart-foot"><span><small>Tahmini tutar</small><b class="num" id="cartTotal">₺0</b></span><span class="btn btn-dark btn-sm">Müdüre gönder<svg class="i go"><use href="#i-arrow-right"/></svg></span></div>
+        </div>
+        <div class="phone sm"><div class="screen"><img class="on" src="img/shots/m-reyon-siparis.jpg" alt="Reyon sipariş ekranı" width="390" height="844" loading="lazy"></div></div>
+      </div>
+    </div>
+
+    <!-- 2 Denetim -->
+    <div class="feature flip">
+      <div class="f-text">
+        <span class="num-tag rv">02</span>
+        <h3 class="rv">Denetim artık <em>kanıtlı.</em></h3>
+        <p class="rv">Denetçi mağazaya vardığında turu başlatır. Sorular tek tek puanlanır, olumsuz cevaplarda fotoğraf zorunludur. Tur bitince mağaza müdürü ekranda imzalar, rapor hazırdır.</p>
+        <ul class="f-list">
+          <li class="rv"><span class="ic"><svg class="i"><use href="#i-camera"/></svg></span><span><b>Zaman damgalı fotoğraf</b><span>Her fotoğrafa tarih, saat ve mağaza bilgisi işlenir.</span></span></li>
+          <li class="rv" style="--d:.05s"><span class="ic"><svg class="i"><use href="#i-list-checks"/></svg></span><span><b>Düzenlenebilir soru şablonu</b><span>Sorular, bölümler ve ağırlıklar merkezden değiştirilebilir.</span></span></li>
+          <li class="rv" style="--d:.1s"><span class="ic"><svg class="i"><use href="#i-target"/></svg></span><span><b>Otomatik düzeltme görevi</b><span>Her eksik, son tarihiyle birlikte sorumlusuna görev olarak düşer.</span></span></li>
+        </ul>
+      </div>
+      <div class="f-vis rv rv-l" id="auditVis">
+        <div class="ui">
+          <div class="ui-h"><span><b>Denetim · Kadıköy</b><br><small>Elif Şahin · 13 Ekim 10:42</small></span><span class="chip ok"><svg class="i"><use href="#i-map-pin"/></svg>Konum doğrulandı</span></div>
+          <div class="audit" style="margin-top:20px">
+            <div class="ring"><svg viewBox="0 0 200 200"><circle class="bg" cx="100" cy="100" r="86"/><circle class="fg" id="ringFg" cx="100" cy="100" r="86"/></svg><div class="val"><span><b class="num" id="ringVal">0</b><small>Genel puan</small></span></div></div>
+            <div class="audit-q">
+              <div>Raf düzeni<span class="bar"><i style="--d:.2s;background:#1F8A5B" data-w="92"></i></span></div>
+              <div>Hijyen<span class="bar"><i style="--d:.35s;background:#1F8A5B" data-w="88"></i></span></div>
+              <div>Etiket &amp; fiyat<span class="bar"><i style="--d:.5s;background:#F4A32A" data-w="64"></i></span></div>
+              <div>Soğuk zincir<span class="bar"><i style="--d:.65s;background:#1F8A5B" data-w="95"></i></span></div>
+              <div>Kasa &amp; personel<span class="bar"><i style="--d:.8s;background:#1F8A5B" data-w="84"></i></span></div>
+            </div>
+          </div>
+          <div class="audit-photos">
+            <div class="audit-photo" data-t="10:44 · Manav"><svg viewBox="0 0 120 90"><rect x="10" y="20" width="100" height="8" fill="rgba(255,255,255,.5)"/><rect x="10" y="48" width="100" height="8" fill="rgba(255,255,255,.5)"/><circle cx="26" cy="14" r="6" fill="#E85D4A"/><circle cx="42" cy="14" r="6" fill="#E85D4A"/><circle cx="58" cy="14" r="6" fill="#F4A32A"/><circle cx="30" cy="42" r="6" fill="#7BB661"/><circle cx="46" cy="42" r="6" fill="#7BB661"/></svg><span class="flash" style="--d:.6s"></span></div>
+            <div class="audit-photo" data-t="10:51 · Etiket" style="background:linear-gradient(135deg,#F3E2C4,#E2B97A)"><svg viewBox="0 0 120 90"><rect x="30" y="28" width="60" height="34" rx="4" fill="#fff"/><rect x="38" y="36" width="30" height="5" fill="#10201E"/><rect x="38" y="46" width="44" height="9" fill="#C2372C"/></svg><span class="flash" style="--d:1.1s"></span></div>
+            <div class="audit-photo" data-t="10:58 · Soğuk" style="background:linear-gradient(135deg,#CFE3F4,#8DB4D8)"><svg viewBox="0 0 120 90"><rect x="24" y="14" width="72" height="62" rx="6" fill="rgba(255,255,255,.55)"/><text x="60" y="52" text-anchor="middle" font-size="18" font-weight="800" fill="#10201E" font-family="Manrope">+3°C</text></svg><span class="flash" style="--d:1.6s"></span></div>
+          </div>
+          <div class="sign"><svg viewBox="0 0 170 56"><path d="M8 40 C 18 10, 26 10, 28 32 S 40 48, 48 24 S 60 8, 64 30 C 66 42, 76 42, 82 28 S 96 18, 100 34 S 118 44, 124 22 C 128 12, 138 14, 140 28 S 154 40, 164 20"/></svg><span><small>Mağaza müdürü onayı</small><b>Murat Demir</b></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CANLI PİYASA ========== -->
+<section class="sec market dark" id="piyasa">
+  <div class="wrap">
+    <div class="feature">
+      <div class="f-text">
+        <span class="num-tag rv">03</span>
+        <h3 class="rv">Rakip fiyatları <em>canlı</em>, kararınız anında.</h3>
+        <p class="rv">Satın alma ekibi, Türkiye'nin önde gelen marketlerindeki fiyatları tek terminalde izler. Bir rakip fiyat düşürdüğünde ya da sizin fiyatınız pazarın üstüne çıktığında uyarı gelir. PERAMAR, marjınızı koruyan fiyatı önerir.</p>
+        <ul class="f-list">
+          <li class="rv"><span class="ic"><svg class="i"><use href="#i-radar"/></svg></span><span><b>Anlık karşılaştırma</b><span>Her ürün için piyasa ortalaması, en düşük fiyat ve konumunuz.</span></span></li>
+          <li class="rv" style="--d:.05s"><span class="ic"><svg class="i"><use href="#i-bell-ring"/></svg></span><span><b>Akıllı uyarılar</b><span>Fiyat düşüşü, pahalı kalma ve fırsat bildirimleri.</span></span></li>
+          <li class="rv" style="--d:.1s"><span class="ic"><svg class="i"><use href="#i-percent"/></svg></span><span><b>Marj koruyan öneri</b><span>Alış maliyetini ve hedef marjı dikkate alan fiyat önerisi.</span></span></li>
+        </ul>
+        <div class="alerts" id="alerts"></div>
+      </div>
+      <div class="f-vis rv rv-r">
+        <div class="term">
+          <div class="term-h"><span class="dots"><i></i><i></i><i></i></span><b>Piyasa terminali</b><span class="live">Canlı</span></div>
+          <div style="overflow-x:auto">
+            <table class="tick-tbl" id="tick">
+              <thead><tr><th>Ürün</th><th>Bizim</th><th>Rakip A</th><th>Rakip B</th><th class="hide-m">Rakip C</th><th>Fark</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="term-foot">
+            <div class="term-chart"><small>Ayçiçek yağı 5 L · 30 gün</small><canvas id="spark" width="600" height="240"></canvas></div>
+            <div class="term-sug"><small>Fiyat önerisi</small><b class="num" id="sugPrice">₺289,90</b><span class="chip ok" style="background:rgba(79,211,154,.14);color:var(--ok-l)"><svg class="i"><use href="#i-trending-up"/></svg>Marj %18,4 korunur</span><small style="text-transform:none;letter-spacing:0;font-weight:600;font-size:12.5px">Piyasa ortalamasının %1,2 altı</small></div>
+          </div>
+        </div>
+        <p class="note"><svg class="i"><use href="#i-eye-off"/></svg>Görseldeki rakipler ve fiyatlar örnektir. Gerçek kullanımda fiyat verileri lisanslı ve kamuya açık kaynaklardan toplanır.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LOJİSTİK ========== -->
+<section class="sec" id="lojistik">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num-tag rv" style="display:inline-grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--brand-50);color:var(--brand);font-weight:800;font-size:15px">04</span>
+      <h2 class="h2 rv split">Hangi ürün <em>hangi tıra</em>, hangi tır <em>hangi mağazaya.</em></h2>
+      <p class="lead rv">Depo raf adresine göre sıralı toplar, sevkiyat siparişleri tırlara kapasite ve soğuk zincir kuralına göre dağıtır, şoför yalnızca bugünkü duraklarını görür. Teslimat imza ve fotoğrafla kapanır.</p>
+      <div class="logi-tabs rv" id="logiTabs" role="tablist">
+        <button class="on" data-p="sev" role="tab"><svg class="i"><use href="#i-route"/></svg>Sevkiyat</button>
+        <button data-p="depo" role="tab"><svg class="i"><use href="#i-warehouse"/></svg>Depo</button>
+        <button data-p="sofor" role="tab"><svg class="i"><use href="#i-truck"/></svg>Şoför</button>
+      </div>
+    </div>
+
+    <div class="logi-stage rv" id="logiStage">
+      <div class="map" id="map">
+        <div class="map-legend"><span><i style="background:#F4A32A"></i>Merkez depo</span><span><i style="background:#4FD39A"></i>34 PRM 017 · yolda</span><span><i style="background:#7AB8FF"></i>34 PRM 042 · yükleniyor</span></div>
+        <svg viewBox="0 0 800 520" preserveAspectRatio="xMidYMid slice" aria-label="Sevkiyat haritası">
+          <path class="road" d="M110 420 C 220 400, 260 320, 360 300 S 520 260, 600 160"/>
+          <path class="road" d="M110 420 C 260 440, 420 460, 560 400 S 700 330, 720 300"/>
+          <path class="road" d="M360 300 C 400 380, 470 380, 560 400"/>
+          <path class="road" d="M600 160 C 660 200, 700 240, 720 300"/>
+          <path id="r1" class="route" stroke="#4FD39A" d="M110 420 C 220 400, 260 320, 360 300 S 520 260, 600 160"/>
+          <path id="r2" class="route" stroke="#7AB8FF" d="M110 420 C 260 440, 420 460, 560 400 S 700 330, 720 300"/>
+          <g class="depot"><rect x="86" y="396" width="48" height="48" rx="14"/><text x="110" y="470" text-anchor="middle">Merkez depo</text><text x="110" y="426" text-anchor="middle" style="fill:#1E1402;font-size:20px">D</text></g>
+          <g class="store"><circle cx="360" cy="300" r="13" stroke="#4FD39A"/><text x="382" y="295">Kadıköy</text><text class="sub" x="382" y="312">Teslim edildi · 09:42</text></g>
+          <g class="store"><circle cx="600" cy="160" r="13" stroke="#4FD39A"/><text x="622" y="155">Ataşehir</text><text class="sub" x="622" y="172">Varış 18 dk</text></g>
+          <g class="store"><circle cx="560" cy="400" r="13" stroke="#7AB8FF"/><text x="494" y="440">Ümraniye</text><text class="sub" x="494" y="457">2. durak</text></g>
+          <g class="store"><circle cx="720" cy="300" r="13" stroke="#7AB8FF"/><text x="700" y="290" text-anchor="end">Maltepe</text><text class="sub" x="700" y="308" text-anchor="end">3. durak</text></g>
+          <g class="truck"><rect x="-17" y="-13" width="34" height="26" rx="8" fill="#4FD39A"/><path d="M-8 -4h10v8h-10z M2 -1h5l3 3v2h-8z" fill="#06302C"/><animateMotion dur="11s" repeatCount="indefinite" rotate="0" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#r1"/></animateMotion></g>
+          <g class="truck"><rect x="-17" y="-13" width="34" height="26" rx="8" fill="#7AB8FF"/><path d="M-8 -4h10v8h-10z M2 -1h5l3 3v2h-8z" fill="#06302C"/><animateMotion dur="15s" begin="-4s" repeatCount="indefinite"><mpath href="#r2"/></animateMotion></g>
+        </svg>
+      </div>
+
+      <div class="side-stack logi-pane on" data-pane="sev">
+        <div class="mini"><h4><svg class="i"><use href="#i-truck"/></svg>Tır doluluk</h4>
+          <div class="truck-row"><span class="plate">34 PRM 017</span><span class="grow"><small>Frigo · 3 durak</small><div class="cap"><i data-w="78" style="width:0"></i></div></span><b class="num">%78</b></div>
+          <div class="truck-row"><span class="plate">34 PRM 042</span><span class="grow"><small>Kuru yük · 2 durak</small><div class="cap"><i class="hot" data-w="94" style="width:0"></i></div></span><b class="num">%94</b></div>
+          <div class="truck-row"><span class="plate">34 PRM 088</span><span class="grow"><small>Frigo · planlanıyor</small><div class="cap"><i data-w="36" style="width:0"></i></div></span><b class="num">%36</b></div>
+        </div>
+        <div class="mini"><h4><svg class="i"><use href="#i-navigation"/></svg>Rota optimizasyonu</h4><p>Durak sırası mesafe ve teslim saatine göre yeniden dizildi.</p><div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap"><span class="chip ok"><svg class="i"><use href="#i-trending-down"/></svg>−14 km</span><span class="chip info"><svg class="i"><use href="#i-timer"/></svg>−26 dk</span></div></div>
+        <div class="mini"><h4><svg class="i"><use href="#i-bell-ring"/></svg>Kural uyarısı</h4><p>Dondurulmuş ürün yalnızca frigo araca atanabilir. Kuru yük tırına atama engellendi.</p></div>
+      </div>
+
+      <div class="side-stack logi-pane" data-pane="depo">
+        <div class="mini"><h4><svg class="i"><use href="#i-scan-barcode"/></svg>Toplama · SP-260418</h4><p>Raf adresine göre sıralı, okutarak toplama.</p>
+          <div class="scanner"><div class="barcode" id="barcode"></div><span class="laser"></span></div>
+          <div class="pick" id="pick">
+            <div><span class="addr">A-03-2</span><span class="grow">Domates (Salkım)</span><b>40 kg</b></div>
+            <div><span class="addr">A-04-1</span><span class="grow">Salatalık</span><b>30 kg</b></div>
+            <div><span class="addr">B-11-3</span><span class="grow">Ayçiçek yağı 5 L</span><b>12 adet</b></div>
+            <div><span class="addr">C-02-1</span><span class="grow">Toz şeker 5 kg</span><b>20 adet</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-stack logi-pane" data-pane="sofor">
+        <div class="drv">
+          <span class="lbl">Sıradaki durak · 2 / 3</span>
+          <h4>Ataşehir</h4>
+          <div class="stops"><i class="d"></i><i class="c"></i><i></i></div>
+          <div class="eta"><div><b>18 dk</b><small>Tahmini varış</small></div><div><b>7,4 km</b><small>Kalan yol</small></div></div>
+          <span class="drv-btn amber"><svg class="i"><use href="#i-navigation"/></svg>Yol tarifi</span>
+          <span class="drv-btn go"><svg class="i"><use href="#i-signature"/></svg>Teslim et · imza al</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== YÖNETİM / CİHAZLAR ========== -->
+<section class="sec" id="yonetim" style="background:linear-gradient(180deg,var(--paper),var(--paper-2));padding-top:60px">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="num-tag rv" style="display:inline-grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--brand-50);color:var(--brand);font-weight:800;font-size:15px">05</span>
+      <h2 class="h2 rv split">Patron için <em>tek bakışta</em> bütün şirket.</h2>
+      <p class="lead rv">Ciro, bekleyen onaylar, denetim puanları, geciken görevler ve yoldaki tırlar aynı kokpitte. Bölgeden mağazaya, mağazadan reyona inebilirsiniz. Masada bilgisayardan, sahada telefondan.</p>
+    </div>
+    <div class="dev-tabs rv" id="devTabs">
+      <button class="on" data-i="0">Patron kokpiti</button>
+      <button data-i="1">Bölge müdürü</button>
+      <button data-i="2">Mağaza müdürü</button>
+      <button data-i="3">Satın alma</button>
+      <button data-i="4">Sevkiyat</button>
+      <button data-i="5">Depo</button>
+    </div>
+    <div class="laptop rv rv-s" style="margin-top:40px">
+      <div class="lid"><div class="scr" id="lapScr">
+        <img class="on" src="img/shots/d-patron.jpg" alt="Patron kokpiti masaüstü görünümü" width="1800" height="1125" loading="lazy">
+        <img src="img/shots/d-bolge.jpg" alt="Bölge müdürü masaüstü görünümü" width="1800" height="1125" loading="lazy">
+        <img src="img/shots/d-magaza.jpg" alt="Mağaza müdürü masaüstü görünümü" width="1800" height="1125" loading="lazy">
+        <img src="img/shots/d-satinalma.jpg" alt="Satın alma masaüstü görünümü" width="1800" height="1125" loading="lazy">
+        <img src="img/shots/d-sevkiyat.jpg" alt="Sevkiyat masaüstü görünümü" width="1800" height="1125" loading="lazy">
+        <img src="img/shots/d-depo.jpg" alt="Depo masaüstü görünümü" width="1800" height="1125" loading="lazy">
+      </div></div>
+      <div class="base"></div>
+      <div class="phone sm"><div class="screen"><img class="on" src="img/shots/m-patron.jpg" alt="Patron telefon görünümü" width="390" height="844" loading="lazy"></div></div>
+    </div>
+    <div class="dash-kpis">
+      <div class="kpi rv"><b class="num" data-count="9">0</b><span>ayrı rol, ayrı ekran</span></div>
+      <div class="kpi rv" style="--d:.08s"><b class="num" data-count="42">0</b><span>hazır ekran ve iş akışı</span></div>
+      <div class="kpi rv" style="--d:.16s"><b class="num" data-count="6">0</b><span>adımda uçtan uca sipariş zinciri</span></div>
+      <div class="kpi rv" style="--d:.24s"><b class="num" data-count="0" data-suffix=" kâğıt">0</b><span>form, irsaliye ya da not defteri</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GÜVENLİK ========== -->
+<section class="sec" id="guvenlik">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow rv">Güvenlik ve kontrol</span>
+      <h2 class="h2 rv split">Kim, neyi, <em>ne zaman</em> yaptı; hep belli.</h2>
+      <p class="lead rv">Yetki, kayıt ve kanıt PERAMAR'ın temelinde. Her onay, her teslimat ve her denetim iz bırakır.</p>
+    </div>
+    <div class="sec-grid">
+      <div class="s-card rv"><span class="ic"><svg class="i"><use href="#i-lock"/></svg></span><h3>Rol bazlı yetki</h3><p>Her kullanıcı yalnızca rolünün ve atandığı mağaza ile bölümün verisini görür. Fiyat ve ciro gibi hassas bilgiler yetkisiz ekranlara hiç gelmez.</p></div>
+      <div class="s-card rv" style="--d:.06s"><span class="ic"><svg class="i"><use href="#i-history"/></svg></span><h3>Değişmez kayıt izi</h3><p>Siparişin her adımı; kim oluşturdu, kim onayladı, kim topladı, kim teslim etti, saatiyle birlikte zaman çizelgesinde durur.</p></div>
+      <div class="s-card rv" style="--d:.12s"><span class="ic"><svg class="i"><use href="#i-camera"/></svg></span><h3>Fotoğraf ve imza kanıtı</h3><p>Denetimler ve teslimatlar zaman damgalı fotoğraf ve dijital imzayla kapanır. "Gelmedi" tartışması biter.</p></div>
+      <div class="s-card rv"><span class="ic"><svg class="i"><use href="#i-users"/></svg></span><h3>Merkezi kullanıcı yönetimi</h3><p>Yeni personel eklemek, rol değiştirmek ya da işten ayrılanın erişimini kapatmak patron ekranından saniyeler sürer.</p></div>
+      <div class="s-card rv" style="--d:.06s"><span class="ic"><svg class="i"><use href="#i-shield-check"/></svg></span><h3>KVKK gözetilerek tasarım</h3><p>Kişisel veriler yalnızca gereken kadar toplanır. Yazı tipleri dahil hiçbir öğe üçüncü taraf sunuculardan yüklenmez.</p></div>
+      <div class="s-card rv" style="--d:.12s"><span class="ic"><svg class="i"><use href="#i-fingerprint"/></svg></span><h3>Hızlı ve güvenli giriş</h3><p>Kullanıcı adı ve şifre ya da destekleyen cihazlarda yüz ve parmak iziyle giriş. Ortak cihazlarda hızlı kullanıcı değişimi.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SÜREÇ ========== -->
+<section class="sec dark" id="surec" style="background:radial-gradient(700px 400px at 50% 0%,rgba(14,94,87,.45),transparent 70%),var(--night)">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow rv">Nasıl başlıyoruz?</span>
+      <h2 class="h2 rv split">Dört adımda <em>PERAMAR'a geçiş.</em></h2>
+      <p class="lead rv">Mevcut düzeninizi bozmadan, mağaza mağaza ilerleyen kontrollü bir geçiş.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><h3>Keşif görüşmesi</h3><p>Mağaza, bölüm, depo ve tır yapınızı birlikte çıkarıyoruz. Onay limitleri ve denetim sorularınızı belirliyoruz.</p></div>
+      <div class="step rv" style="--d:.08s"><h3>Kurulum ve veri aktarımı</h3><p>Ürün kataloğu, tedarikçiler, kullanıcılar ve yetkiler sisteme aktarılır. Kendi logonuz ve renklerinizle.</p></div>
+      <div class="step rv" style="--d:.16s"><h3>Ekip eğitimi</h3><p>Her rol için kısa, uygulamalı eğitim. Ekranlar sade olduğu için reyon görevlisi ilk gün kullanmaya başlar.</p></div>
+      <div class="step rv" style="--d:.24s"><h3>Canlıya geçiş ve destek</h3><p>Önce bir pilot mağaza, ardından tüm zincir. Geçiş boyunca ve sonrasında yanınızdayız.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SSS ========== -->
+<section class="sec" id="sss">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow rv">Sıkça sorulanlar</span>
+      <h2 class="h2 rv split">Aklınıza takılanlar.</h2>
+    </div>
+    <div class="faq" id="faq">
+      <div class="qa rv open"><button aria-expanded="true">PERAMAR hangi cihazlarda çalışır?<span class="pm"><svg class="i"><use href="#i-chevron-down"/></svg></span></button><div class="ans"><div><p>Telefon, tablet ve bilgisayarda tarayıcı üzerinden çalışır. Mağaza bilgisayarına ya da personelin telefonuna program kurmak gerekmez; isteyen tek dokunuşla ana ekrana ekleyip uygulama gibi kullanır.</p></div></div></div>
+      <div class="qa rv"><button aria-expanded="false">Her çalışan gerçekten yalnızca kendi bölümünü mü görür?<span class="pm"><svg class="i"><use href="#i-chevron-down"/></svg></span></button><div class="ans"><div><p>Evet. Örneğin manav sorumlusu yalnızca meyve, sebze ve yeşillik ürünlerini görür ve sipariş verebilir. Şoför yalnızca kendi tırının bugünkü duraklarını görür. Yetkileri patron ya da yetkilendirdiği yönetici belirler.</p></div></div></div>
+      <div class="qa rv"><button aria-expanded="false">Siparişler merkez depoya mı, tedarikçiye mi gider?<span class="pm"><svg class="i"><use href="#i-chevron-down"/></svg></span></button><div class="ans"><div><p>İkisi de. Her ürün için tedarik yolu tanımlanır. Merkez depodan gelen kalemler depo toplama ve sevkiyat akışına girer, tedarikçiden gelen kalemler doğrudan tedarikçiye iletilir ve mağazada mal kabulle kapanır.</p></div></div></div>
+      <div class="qa rv"><button aria-expanded="false">Rakip fiyatları nereden geliyor?<span class="pm"><svg class="i"><use href="#i-chevron-down"/></svg></span></button><div class="ans"><div><p>Fiyat verileri lisanslı veri sağlayıcılarından ve kamuya açık kaynaklardan toplanır. Hangi rakiplerin ve hangi ürünlerin izleneceğini siz belirlersiniz.</p></div></div></div>
+      <div class="qa rv"><button aria-expanded="false">Denetim sorularını değiştirebilir miyiz?<span class="pm"><svg class="i"><use href="#i-chevron-down"/></svg></span></button><div class="ans"><div><p>Evet. Sorular, bölümler, puan ağırlıkları ve hangi sorularda fotoğrafın zorunlu olacağı şablon editöründen düzenlenir. Değişiklik bir sonraki denetim turundan itibaren geçerli olur.</p></div></div></div>
+      <div class="qa rv"><button aria-expanded="false">Mevcut ERP ya da kasa sistemimizle çalışır mı?<span class="pm"><svg class="i"><use href="#i-chevron-down"/></svg></span></button><div class="ans"><div><p>Ürün, stok ve satış verilerinin mevcut sistemlerinizden aktarılması kurulum sürecinde birlikte planlanır. Entegrasyon kapsamı keşif görüşmesinde netleşir.</p></div></div></div>
+      <div class="qa rv"><button aria-expanded="false">Kaç mağazaya kadar kullanılabilir?<span class="pm"><svg class="i"><use href="#i-chevron-down"/></svg></span></button><div class="ans"><div><p>PERAMAR tek mağazalı işletmeden çok bölgeli zincirlere kadar ölçeklenecek şekilde tasarlandı. Bölge, mağaza, bölüm ve tır sayısı sınırlanmaz.</p></div></div></div>
+      <div class="qa rv"><button aria-expanded="false">Hemen deneyebilir miyim?<span class="pm"><svg class="i"><use href="#i-chevron-down"/></svg></span></button><div class="ans"><div><p>Evet. Canlı demoda örnek bir market zinciri hazır: giriş ekranındaki demo hesaplarından birine dokunun ve 9 rolün tamamını gezin. Profil menüsündeki "Rol değiştir" ile roller arasında anında geçebilirsiniz.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ÇAĞRI + İLETİŞİM ========== -->
+<section class="sec cta dark" id="iletisim">
+  <div class="wrap cta-grid">
+    <div>
+      <span class="eyebrow rv">Demo talebi</span>
+      <h2 class="rv split" style="margin-top:16px">Marketinizi <em>PERAMAR</em> ile yönetmeye hazır mısınız?</h2>
+      <p class="lead rv">Formu doldurun, size özel bir tanıtım planlayalım. Ya da beklemeden canlı demoya göz atın.</p>
+      <ul class="cta-list">
+        <li class="rv"><svg class="i"><use href="#i-check"/></svg>Zincirinize özel kurgulanmış tanıtım</li>
+        <li class="rv" style="--d:.06s"><svg class="i"><use href="#i-check"/></svg>Kendi logonuz ve renklerinizle örnek kurulum</li>
+        <li class="rv" style="--d:.12s"><svg class="i"><use href="#i-check"/></svg>Pilot mağaza ile risksiz başlangıç</li>
+      </ul>
+      <div class="contact-cards" id="contactCards"></div>
+      <a class="btn btn-ghost btn-lg rv" style="margin-top:30px" href="https://emirhanerdal.github.io/peramar/" target="_blank" rel="noopener"><svg class="i"><use href="#i-play"/></svg>Canlı demoyu aç<svg class="i go"><use href="#i-arrow-up-right"/></svg></a>
+    </div>
+    <div class="form rv rv-r" id="formBox">
+      <form id="form" novalidate>
+        <h3>Demo talep formu</h3>
+        <p>Kısa formu doldurun, sizinle iletişime geçelim.</p>
+        <div class="fgrid">
+          <div class="field"><label for="f-ad">Ad soyad</label><input id="f-ad" name="ad" autocomplete="name" required></div>
+          <div class="field"><label for="f-firma">Firma</label><input id="f-firma" name="firma" autocomplete="organization" required></div>
+          <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+          <div class="field"><label for="f-mail">E-posta</label><input id="f-mail" name="mail" type="email" autocomplete="email" required></div>
+          <div class="field full"><label for="f-say">Mağaza sayısı</label><select id="f-say" name="say" required><option value="">Seçin</option><option>1–5</option><option>6–20</option><option>21–100</option><option>100+</option></select></div>
+          <div class="field full"><label for="f-not">Mesajınız <span style="color:var(--faint);font-weight:600">(isteğe bağlı)</span></label><textarea id="f-not" name="not"></textarea></div>
+          <label class="check full"><input type="checkbox" id="f-kvkk" required><span>Bilgilerimin demo talebim için iletişim amacıyla işlenmesini kabul ediyorum.</span></label>
+        </div>
+        <button class="btn btn-accent btn-lg" type="submit">Demo talep et<svg class="i go"><use href="#i-arrow-right"/></svg></button>
+      </form>
+      <div class="form-ok" role="status"><span class="ic"><svg class="i"><use href="#i-check"/></svg></span><h3>Teşekkürler!</h3><p id="okMsg">Talebiniz hazırlandı. En kısa sürede sizinle iletişime geçeceğiz.</p><a class="btn btn-dark" style="margin-top:22px" href="https://emirhanerdal.github.io/peramar/" target="_blank" rel="noopener">Bu arada canlı demoyu açın<svg class="i go"><use href="#i-arrow-up-right"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><a href="#top" class="brand"><svg><use href="#logo"/></svg><span>PERA<b>MAR</b></span></a><p>Reyondan patrona, depodan tır şoförüne; Türk perakendesi için rol bazlı market operasyon platformu.</p></div>
+      <div><h4>Ürün</h4><ul><li><a href="#roller">Roller</a></li><li><a href="#akis">Sipariş akışı</a></li><li><a href="#moduller">Modüller</a></li><li><a href="#piyasa">Piyasa analizi</a></li></ul></div>
+      <div><h4>Şirket</h4><ul><li><a href="#guvenlik">Güvenlik</a></li><li><a href="#surec">Geçiş süreci</a></li><li><a href="#sss">SSS</a></li><li><a href="#iletisim">İletişim</a></li></ul></div>
+      <div><h4>Deneyin</h4><ul><li><a href="https://emirhanerdal.github.io/peramar/" target="_blank" rel="noopener">Canlı demo</a></li><li><a href="#iletisim">Demo talep et</a></li></ul></div>
+    </div>
+    <div class="big-word" aria-hidden="true">PERAMAR</div>
+    <div class="foot-bot"><span>© <span id="yr">2026</span> PERAMAR. Tüm hakları saklıdır.</span><span>Görsellerdeki market, kişi, rakip ve fiyat bilgileri örnektir.</span></div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Başa dön"><svg class="i"><use href="#i-arrow-right"/></svg></button>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="js/site.js"></script>
+</body>
+</html>
