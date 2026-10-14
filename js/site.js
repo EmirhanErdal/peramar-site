@@ -288,7 +288,7 @@
 
   /* ---------- Sipariş görseli ---------- */
   onSeen($('#cartVis'), function () {
-    var qs = $$('#cartVis [data-q]'), prices = [42.9, 34.5, 64.9, 22.5], total = $('#cartTotal');
+    var qs = $$('#cartVis [data-q]'), prices = [34.9, 74.9, 24.9, 17.5], total = $('#cartTotal');
     var t0 = performance.now(), D = 1600;
     (function f(t) {
       var k = Math.min(1, (t - t0) / D), e = 1 - Math.pow(1 - k, 3), sum = 0;
